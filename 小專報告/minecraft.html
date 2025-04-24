@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecraft記憶配對遊戲</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            /* 讓 body 佔滿整個視窗高度 */
+            background-image: url(images/Minecraft_back.jpg);
+            background-color: rgba(0, 0, 0, .6);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        h1 {
+            color: white;
+        }
+
+        p {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Minecraft記憶配對遊戲</h1>
+    <p id="status">翻開兩張相同的卡片來配對！</p>
+    <div class="game-board">
+        <!-- 這裡的卡片會用 JavaScript 動態生成 -->
+    </div>
+    <button id="restartBtn">重新開始</button>
+    <script src="script.js"></script>
+</body>
+
+</html>

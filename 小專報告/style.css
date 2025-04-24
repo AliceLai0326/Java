@@ -1,0 +1,69 @@
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+    align-items: center;
+    margin: 0 auto;
+    width: fit-content;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8); /* 讓背景稍微有透明度 */
+    border-radius: 10px;
+}
+
+.card {
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    transform: rotateY(180deg);
+    transition: transform 0.3s;
+    overflow: hidden; /* 防止圖片溢出 */
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* 讓整張圖片完整顯示 */
+    display: none; 
+    border-radius: 10px;
+    background-color: white; /* 背景填充白色，避免圖片太小時出現透明區塊 */
+}
+
+.card.flipped {
+    transform: rotateY(0deg);
+}
+
+.card.flipped img {
+    display: block;
+}
+
+.card.matched {
+    pointer-events: none;
+    opacity: 0.6;
+}
+
+#restartBtn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+#restartBtn:hover {
+    background-color: #218838;
+}
